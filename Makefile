@@ -5,3 +5,4 @@ problem:
 	fi
 	mkdir -p $(DAY)
 	cd $(DAY); cargo init --vcs none
+	@printf '\n[lints.rust]\nwarnings = "deny"\n\n[lints.clippy]\nall = "deny"\npedantic = "deny"\nnursery = "warn"\n' >> $(DAY)/Cargo.toml
